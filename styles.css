@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  background: none;
+  outline-style: none;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  font-family: montserrat;
+  height: 100vh;
+}
+#pricing_card {
+  /* height: 30px; */
+  width: 650px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.pricing_image {
+  width: 245px;
+  transform: scale(1.1);
+  cursor: pointer;
+  border-radius: 20px 0 0 20px;
+}
+
+.pricing_image img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+}
+.pricing_image img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+
+.pricing_card_title {
+  text-align: center;
+  margin: 1rem 0 0.2rem 0;
+}
+.pricing_card_header h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+}
+.pricing_card_features {
+  margin: 1.5rem;
+}
+.pricing_card_features_item {
+  margin: 0.5rem;
+}
+.pricing_card_price {
+  margin: 0.5rem;
+  font-weight: 600;
+}
+.pricing_card_footer button {
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  display: block;
+  background-color: rgb(167, 167, 128);
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+.pricing_card_footer button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  #pricing_card {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 0;
+  }
+  .pricing_image {
+    width: 350px;
+    height: 350px;
+  }
+  .pricing_card_title {
+    text-align: center;
+    margin: 2rem 0 0.2rem 0;
+  }
+  .pricing_card_features_item {
+    margin-top: 0.5rem;
+  }
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .pricing_card_footer button {
+    margin: 0 0 2rem 0;
+    color: white;
+    padding: 0.5rem 5rem;
+    font-size: 1.5rem;
+  }
+
+  .pricing_card_footer button:hover {
+    background-color: rgb(119, 119, 84);
+  }
+}
